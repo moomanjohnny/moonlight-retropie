@@ -5,7 +5,12 @@ import os
 import sys
 import subprocess
 
-dialog = imp.load_source("dialog", "./dialog.py")
+try:
+    dialogSource = sys.argv[4]
+except IndexError:
+    sys.exit(1)
+
+dialog = imp.load_source("dialog", dialogSource)
 
 try:
     configFile = sys.argv[1]
