@@ -11,7 +11,7 @@ def execute_cmd(cmd_string):
      a = os.system(cmd_string)
 
 def getGames():
-    system("clear")
+    os.system("clear")
     gameList = subprocess.check_output(['moonlight', 'list']).split('\n')
     finishedList = []
 
@@ -41,7 +41,7 @@ def getGames():
         gameFile.write(finishedList[gameNum])
         gameFile.close()
      
-    system("clear")
+    os.system("clear")
     print(finishedList)
 
 args = sys.argv
@@ -71,3 +71,4 @@ getGames()
 
 appRead.close()
 configFile.close()
+os.system("clear")

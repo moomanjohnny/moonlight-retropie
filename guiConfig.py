@@ -8,6 +8,7 @@ import subprocess
 try:
     dialogSource = sys.argv[4]
 except IndexError:
+    print("Could not find dependency dialog.py. Exiting with error code 1.")
     sys.exit(1)
 
 dialog = imp.load_source("dialog", dialogSource)
