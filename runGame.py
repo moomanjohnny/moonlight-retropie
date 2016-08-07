@@ -71,4 +71,3 @@ getGames()
 
 appRead.close()
 configFile.close()
-os.system('clear')
